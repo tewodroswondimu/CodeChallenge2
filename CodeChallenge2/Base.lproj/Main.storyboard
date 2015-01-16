@@ -70,6 +70,7 @@
                     <connections>
                         <outlet property="citiesTableView" destination="Y5d-X9-htV" id="zmw-El-oUV"/>
                         <outlet property="editButton" destination="vxj-Jq-W4t" id="hUV-SX-P1D"/>
+                        <outlet property="navigationItemBar" destination="dPU-4S-UFH" id="6Iq-2N-3N0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -124,6 +125,15 @@
                                     <outletCollection property="gestureRecognizers" destination="tMW-cv-CZo" appends="YES" id="1Q4-Hf-V14"/>
                                 </connections>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rs-sR-r25">
+                                <rect key="frame" x="101" y="460" width="118" height="30"/>
+                                <state key="normal" title="Change Nav Title">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChangeNavButtonTapped:" destination="YG5-tf-3d4" eventType="touchUpInside" id="xkX-7g-n9i"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

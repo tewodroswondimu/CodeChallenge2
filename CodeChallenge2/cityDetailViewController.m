@@ -37,6 +37,13 @@
     self.isInEditMode = NO;
 }
 
+- (IBAction)onChangeNavButtonTapped:(UIButton *)sender
+{
+    if ([self.delegate respondsToSelector:@selector(changeNavigationTitle:)]) {
+        [self.delegate changeNavigationTitle:self.city];
+    }
+}
+
 - (IBAction)onEditButtonPressed:(UIBarButtonItem *)sender
 {
 

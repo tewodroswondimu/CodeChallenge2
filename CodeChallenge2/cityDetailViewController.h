@@ -9,9 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "City.h"
 
+@protocol CityDetailViewControllerDelegate <NSObject>
+
+- (void)changeNavigationTitle:(City *)city;
+
+@end
+
 @interface CityDetailViewController : UIViewController
 
 @property City *city;
-@property NSMutableArray *cities;
+
+@property (nonatomic, weak) id<CityDetailViewControllerDelegate> delegate;
 
 @end

@@ -10,10 +10,11 @@
 #import "CityDetailViewController.h"
 #import "City.h"
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, CityDetailViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *citiesTableView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *editButton;
+@property (weak, nonatomic) IBOutlet UINavigationItem *navigationItemBar;
 
 @property CityDetailViewController *cityDetailViewController;
 
@@ -31,6 +32,11 @@
     City *philadelphia = [[City alloc] initWithCityName:@"Philadelphia" state:@"Pennsylvania" image:[UIImage imageNamed:@"Philadelphia"] url:@"en.wikipedia.org/wiki/Philadelphia"];
     self.cities = [[NSMutableArray alloc] initWithObjects:chicago, losAngeles, newYork, philadelphia, nil];
     [self.citiesTableView reloadData];
+}
+
+-(void)changeNavigationTitle:(City *)city
+{
+    self.navigationItemBar.title = city.name;
 }
 
 // Reloads the table view data whenever the view appears again
@@ -89,14 +95,16 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Create an instance of the destination view controller
-    CityDetailViewController *cdvc = segue.destinationViewController;
+    self.cityDetailViewController = segue.destinationViewController;
 
     // Create a UITableViewCell from the table view cell that was tapped
     UITableViewCell *cell = (UITableViewCell *)sender;
 
     // Assign the city property of the destination view controller's instance city that was tapped
-    cdvc.city = [self.cities objectAtIndex:[[self.citiesTableView indexPathForCell:cell] row]];
-    cdvc.cities = self.cities;
+    self.cityDetailViewController.city = [self.cities objectAtIndex:[[self.citiesTableView indexPathForCell:cell] row]];
+
+    // Set up the delegate for CityDetailViewController
+    self.cityDetailViewController.delegate = self;
 }
 
 @end
