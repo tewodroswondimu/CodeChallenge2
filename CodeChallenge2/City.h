@@ -12,10 +12,11 @@
 
 @interface City : NSObject
 
-- (instancetype) initWithCityName:(NSString *)name state:(NSString *)state image:(UIImage *)image;
+- (instancetype) initWithCityName:(NSString *)name state:(NSString *)state image:(UIImage *)image url:(NSString *)url;
 
 @property NSString *name;
 @property NSString *state;
+@property NSString *url;
 @property UIImage *image;
 
 @end

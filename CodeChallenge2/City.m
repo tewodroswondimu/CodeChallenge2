@@ -10,13 +10,14 @@
 
 @implementation City
 
-- (instancetype) initWithCityName:(NSString *)name state:(NSString *)state image:(UIImage *)image
+- (instancetype) initWithCityName:(NSString *)name state:(NSString *)state image:(UIImage *)image url:(NSString *)url
 {
     self = [super init];
     if (self) {
         self.name = name;
         self.state = state;
         self.image = image;
+        self.url = [NSString stringWithFormat:@"http://%@", url ];
     }
     return self;
 }

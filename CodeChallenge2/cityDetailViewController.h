@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  cityDetailViewController.h
 //  CodeChallenge2
 //
 //  Created by Tewodros Wondimu on 1/16/15.
@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "City.h"
 
-@interface ViewController : UIViewController
+@interface CityDetailViewController : UIViewController
 
+@property City *city;
 @property NSMutableArray *cities;
 
 @end
-

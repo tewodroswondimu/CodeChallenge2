@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  WebViewController.h
 //  CodeChallenge2
 //
 //  Created by Tewodros Wondimu on 1/16/15.
@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface WebViewController : UIViewController
 
-@property NSMutableArray *cities;
+@property NSString *url;
 
 @end
-
