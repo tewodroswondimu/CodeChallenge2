@@ -9,7 +9,8 @@
 #import "CityDetailViewController.h"
 #import "WebViewController.h"
 
-@interface CityDetailViewController ()
+@interface CityDetailViewController () <UITextFieldDelegate>
+
 @property (weak, nonatomic) IBOutlet UILabel *cityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -37,6 +38,7 @@
     self.isInEditMode = NO;
 }
 
+// When the change nav bar button is pressed change the title of the nav bar
 - (IBAction)onChangeNavButtonTapped:(UIButton *)sender
 {
     if ([self.delegate respondsToSelector:@selector(changeNavigationTitle:)]) {
@@ -44,6 +46,7 @@
     }
 }
 
+// When the edit button is pressed show the text fields and change button to done
 - (IBAction)onEditButtonPressed:(UIBarButtonItem *)sender
 {
 

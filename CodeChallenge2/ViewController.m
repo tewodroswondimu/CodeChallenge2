@@ -34,6 +34,7 @@
     [self.citiesTableView reloadData];
 }
 
+// Changes the title when the change nav button is fired in the City View Controller
 -(void)changeNavigationTitle:(City *)city
 {
     self.navigationItemBar.title = city.name;
@@ -45,6 +46,7 @@
     [self.citiesTableView reloadData];
 }
 
+// Sets up the table view to have as many cells as the number of cities
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.cities.count;
@@ -87,6 +89,7 @@
     [self.citiesTableView reloadData];
 }
 
+// Sets tableview editing to enabled
 -(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return YES;
