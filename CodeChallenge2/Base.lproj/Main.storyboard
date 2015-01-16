@@ -57,7 +57,17 @@
                             <constraint firstItem="Y5d-X9-htV" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="uyR-rh-Gzi"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="dPU-4S-UFH"/>
+                    <navigationItem key="navigationItem" id="dPU-4S-UFH">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="vxj-Jq-W4t">
+                            <connections>
+                                <action selector="onEditButtonPressed:" destination="vXZ-lx-hvc" id="BrW-RD-4FA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="citiesTableView" destination="Y5d-X9-htV" id="zmw-El-oUV"/>
+                        <outlet property="editButton" destination="vxj-Jq-W4t" id="hUV-SX-P1D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

@@ -4,6 +4,7 @@
 //
 //  Created by Tewodros Wondimu on 1/16/15.
 //  Copyright (c) 2015 MobileMakers. All rights reserved.
+//  Custom class named City with the necessary properties to hold the city‘s name and state
 //
 
 #import <Foundation/Foundation.h>
