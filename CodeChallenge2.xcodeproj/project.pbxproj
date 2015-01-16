@@ -14,6 +14,7 @@
 		182F573D1A69814A002A860A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182F573C1A69814A002A860A /* Images.xcassets */; };
 		182F57401A69814A002A860A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182F573E1A69814A002A860A /* LaunchScreen.xib */; };
 		182F574C1A69814A002A860A /* CodeChallenge2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182F574B1A69814A002A860A /* CodeChallenge2Tests.m */; };
+		182F57571A69830B002A860A /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 182F57561A69830B002A860A /* City.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		182F57451A69814A002A860A /* CodeChallenge2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallenge2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182F574A1A69814A002A860A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182F574B1A69814A002A860A /* CodeChallenge2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeChallenge2Tests.m; sourceTree = "<group>"; };
+		182F57551A69830B002A860A /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
+		182F57561A69830B002A860A /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				182F57341A69814A002A860A /* AppDelegate.m */,
 				182F57361A69814A002A860A /* ViewController.h */,
 				182F57371A69814A002A860A /* ViewController.m */,
+				182F57551A69830B002A860A /* City.h */,
+				182F57561A69830B002A860A /* City.m */,
 				182F57391A69814A002A860A /* Main.storyboard */,
 				182F573C1A69814A002A860A /* Images.xcassets */,
 				182F573E1A69814A002A860A /* LaunchScreen.xib */,
@@ -221,6 +226,7 @@
 			files = (
 				182F57381A69814A002A860A /* ViewController.m in Sources */,
 				182F57351A69814A002A860A /* AppDelegate.m in Sources */,
+				182F57571A69830B002A860A /* City.m in Sources */,
 				182F57321A69814A002A860A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

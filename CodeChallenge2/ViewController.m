@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "City.h"
 
-@interface ViewController ()
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property NSMutableArray *cities;
 
 @end
 
@@ -16,12 +19,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    City *chicago = [[City alloc] initWithCityName:@"Chicago" state:@"Illinois" image:[UIImage imageNamed:@"Chicago"]];
+    City *losAngeles = [[City alloc] initWithCityName:@"Los Angeles" state:@"California" image:[UIImage imageNamed:@"LosAngeles"]];
+    City *newYork = [[City alloc] initWithCityName:@"New York" state:@"New York" image:[UIImage imageNamed:@"NewYork"]];
+    City *philadelphia = [[City alloc] initWithCityName:@"Philadelphia" state:@"Pennsylvania" image:[UIImage imageNamed:@"Philadelphia"]];
+    self.cities = [[NSMutableArray alloc] initWithObjects:chicago, losAngeles, newYork, philadelphia, nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.cities.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CitiesTableViewCellID"];
+    City *currentCity = [[City alloc] init];
+    currentCity = [self.cities objectAtIndex:indexPath.row];
+    cell.textLabel.text = currentCity.name;
+    cell.detailTextLabel.text = currentCity.state;
+    cell.imageView.image = currentCity.image;
+    return cell;
 }
 
 @end
